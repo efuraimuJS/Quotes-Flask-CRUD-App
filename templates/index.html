@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <title>Quotes Home Page</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="" />
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="/favicon.ico" />
+  <style></style>
+  <script src=""></script>
+  <body>
+    <h1>Quotes Home Page</h1>
+    {% if quote%}
+    <p>1. {{quote}}</p>
+    {% else %}
+    <p>1. Goodbye from our new world</p>
+    {%endif%} 
+
+    <ul>
+      {%for billion in billions%}
+      <li>{{billion}}</li>
+      {%endfor%}
+    </ul>
+  </body>
+</html>

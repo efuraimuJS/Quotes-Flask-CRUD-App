@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <title>Quotes Home Page</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="" />
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="/favicon.ico" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css"
+    integrity="sha512-CpIKUSyh9QX2+zSdfGP+eWLx23C8Dj9/XmHjZY2uDtfkdLGo0uY12jgcnkX9vXOgYajEKb/jiw67EYm+kBf+6g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <script src=""></script>
+  <body>
+    <br /><br />
+    <form action="/process_quote" method="post">
+      <div class="form-group">
+        <label for="qt_detail">Quote Details</label>
+        <input
+          type="text"
+          name="qt_detail"
+          class="form-control"
+          id="qt_detail"
+          aria-describedby="emailHelp"
+          placeholder="Register new quote"
+        />
+      </div>
+      <div class="form-group">
+        <label for="qt_author"></label>
+        <input
+          type="text"
+          name="qt_author"
+          class="form-control"
+          id="qt_author"
+          placeholder="Register author"
+        />
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1"
+          >Check to confirm quote validity</label
+        >
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+    integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"
+    integrity="sha512-5BqtYqlWfJemW5+v+TZUs22uigI8tXeVah5S/1Z6qBLVO7gakAOtkOzUtgq6dsIo5c0NJdmGPs0H9I+2OHUHVQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+</html>

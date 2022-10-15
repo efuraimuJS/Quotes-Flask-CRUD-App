@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <title>Quotes Home Page</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="" />
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="/favicon.ico" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css"
+    integrity="sha512-CpIKUSyh9QX2+zSdfGP+eWLx23C8Dj9/XmHjZY2uDtfkdLGo0uY12jgcnkX9vXOgYajEKb/jiw67EYm+kBf+6g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <script src=""></script>
+  <body>
+    <br /><br />
+    <ul class="nav nav-pills justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" href="{{url_for('reg_quotes')}}"
+          >Subscribe to new quote</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <h2 style="">Your Quotes List</h2>
+    {%for result in query_results%}
+    <div class="card" style="width: 18rem">
+      <img
+        class="card-img-top"
+        src="{{url_for('static', filename='elon-dp.jpg')}}"
+        alt="Elon Musk"
+      />
+
+      <div class="card-body">
+        <p class="card-text">{{result.qt_detail}}</p>
+        <em class="card-title">Authored by {{result.qt_author}}</em>
+      </div>
+    </div>
+    {%endfor%}
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+    integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"
+    integrity="sha512-5BqtYqlWfJemW5+v+TZUs22uigI8tXeVah5S/1Z6qBLVO7gakAOtkOzUtgq6dsIo5c0NJdmGPs0H9I+2OHUHVQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+</html>
